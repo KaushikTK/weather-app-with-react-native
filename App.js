@@ -13,7 +13,8 @@ const App = ()=>{
   let [feelsLike, setFeelsLike] = useState('');
 
   const getDatafromApi = async ()=>{
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${region}&appid=d6a669e5a79c694217279bd63972b68b&units=metric`
+    // enter your weather api here
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${region}&appid=d6a669e5a79c694217279xxxxxxxxxxx&units=metric`
     let data = await fetch(url);
     if(data.ok){
       data = await data.json();
@@ -84,41 +85,6 @@ const App = ()=>{
         </View>
       </View>
     </View>
-
-
-
-
-
-
-    //<View style={[s.body]}>
-    //  <View style={[s.container,s.justifyContentCenter,s.h100,{alignItems:'center'}]}>
-    //    <View style={[s.row, {height:'100%',width:'80%',border:'none'}]}>
-    //      <View style={[s.card,s.myAuto,s.myAuto, s.shadow,{border:'none', borderRadius:'2em', height:'80%'}]}>
-    //        <View style={[s.cardHeader,{backgroundColor:'white'}]}>
-    //          <Text style={[s.text, s.textLarge, {alignItems:'center', textAlign:'center'}]}>WEATHER APP</Text>
-    //        </View>
-    //        <View style={[s.cardBody]}>
-    //        <View style={[s.cardHeader,s.justifyContentCenter,s.shadowSm,{borderBottomColor:'#007bff',height:'70%',backgroundColor:'white'}]}>
-    //            <View style={[s.justifyContentCenter,{textAlign:'center',height:'70%'}]}>
-    //              <Text style={[s.justifyContentCenter,{fontSize:'3.75em'}]}>{`${curr}°Cel`}</Text>
-    //            </View>
-    //            <Text style={[s.textPrimary, s.textMuted,s.textLarge,{textAlign:'center', paddingTop:'1em'}]}>Feels like {feelsLike}°Cel</Text>
-    //        </View>
-
-            
-    //        <View style={[s.cardHeader,s.justifyContentCenter,{borderBottomColor:'white',height:'25%',backgroundColor:'white', borderTopColor:'white'}]}>
-    //            <Text style={[s.textMuted,s.textLarge,{textAlign:'center', paddingBottom:'3.5%'}]}>{`Min: ${min}°Cel Max: ${max}°Cel`}</Text>
-    //        </View>
-
-    //        <View style={[s.row,{bottom:'1%', alignItems:'center',alignContent:'stretch'}]}>
-    //          <TextInput value={region} placeholder='Enter your region' onChange={e=>{setRegion(e.target.value);getDatafromApi()}} style={[s.formControl,{marginBottom:'2%',textTransform:'capitalize'}]}></TextInput>
-    //        </View>
-    //        </View>
-
-    //      </View>
-    //    </View>
-    //  </View>
-    //</View>
   )
 }
 
